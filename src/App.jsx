@@ -1,14 +1,13 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react"
+import "./App.css"
+import conf from "./conf/conf"
 
 function App() {
-  console.log(import.meta.env.VITE_APPWRITE_URL);
-
-  return (
-    <>
-      <div>Basic Blog app using React and Appwrite</div>
-    </>
-  )
+    return (
+        <>
+            <div>Basic Blog app using React and Appwrite</div>
+        </>
+    )
 }
 
 export default App
