@@ -21,7 +21,7 @@ function App() {
                 }
             })
             .catch((error) => {
-                console.log("App.Jsx :: UserStatus :: Error", error)
+                // console.log("App.Jsx :: UserStatus :: Error", error)
             })
             .finally(() => setloading(false))
     }, [])
@@ -31,7 +31,7 @@ function App() {
             <div className="w-full block">
                 <Header />
                 <main>
-                  Todo: <Outlet />
+                    Todo: <Outlet />
                 </main>
                 <Footer />
             </div>

@@ -23,7 +23,6 @@ export class AuthService {
             )
 
             if (userAccount) {
-                //logic
                 return this.login({ email, password })
             } else {
                 return userAccount
