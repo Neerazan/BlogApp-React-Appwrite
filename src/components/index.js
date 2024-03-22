@@ -12,5 +12,6 @@ import Signup from "./Signup.jsx"
 import Select from "./Select.jsx"
 import PostCard from "./PostCard.jsx"
 import PostForm from "./Post-Form/PostForm.jsx"
+import AuthLaout from "./AuthLayout.jsx"
 
-export { Header, Footer, Container, Logo, LogoutBtn, Input, Button, Login, Signup, Select, RTE, PostCard, PostForm}
+export { Header, Footer, Container, Logo, LogoutBtn, Input, Button, Login, Signup, Select, RTE, PostCard, PostForm, AuthLaout}
