@@ -6,15 +6,20 @@ import { Button, Logo, Input } from "./index"
 import { useDispatch } from "react-redux"
 import { useForm } from "react-hook-form"
 
+console.log("signup :: start >>>>>>>>>>>>>>>>>>>")
+
 function Signup() {
     const navigate = useNavigate()
     const [error, setError] = useState("")
     const dispatch = useDispatch()
     const { register, handleSubmit } = useForm()
 
+    console.log("signup :: start")
+
     const create = async (data) => {
         setError("")
         try {
+            console.log(`signup :: try`)
             const userData = await authService.createAccount(data)
             if (userData) {
                 const userData = await authService.getCurrentUser()
@@ -22,6 +27,7 @@ function Signup() {
                 navigate("/")
             }
         } catch (error) {
+            console.log(`signup :: catch`)
             setError(error.message)
         }
     }
@@ -74,9 +80,17 @@ function Signup() {
                             })}
                         />
 
-                        <Input label="Password: " type="password" placeholder="Enter Your Password" {...register("password", { required: true })} />
+                        <Input
+                            label="Password: "
+                            type="password"
+                            placeholder="Enter Your Password"
+                            {...register("password", { required: true })}
+                        />
 
-                        <Button type="submit" className="w-full"> Create Account </Button>
+                        <Button type="submit" className="w-full">
+                            {" "}
+                            Create Account{" "}
+                        </Button>
                     </div>
                 </form>
             </div>

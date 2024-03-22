@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import appwriteService from "../appwrite/config"
 import { Container, PostCard } from "../components"
 
-function AllPost() {
+function AllPosts() {
     const [posts, setPosts] = useState([])
     useEffect(() => {}, [])
 
@@ -26,4 +26,4 @@ function AllPost() {
     )
 }
 
-export default AllPost
+export default AllPosts

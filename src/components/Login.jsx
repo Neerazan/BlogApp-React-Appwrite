@@ -61,12 +61,11 @@ function Login() {
                             {...register("email", {
                                 required: true,
                                 validate: {
-                                    matchPatern: (value) => (
+                                    matchPatern: (value) =>
                                         /^([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}$/gim.test(
                                             value
                                         ) ||
-                                            "Email address must be a valid address"
-                                    )
+                                        "Email address must be a valid address",
                                 },
                             })}
                         />
@@ -88,3 +87,5 @@ function Login() {
         </div>
     )
 }
+
+export default Login

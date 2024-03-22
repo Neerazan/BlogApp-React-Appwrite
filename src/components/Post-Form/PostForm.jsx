@@ -17,7 +17,7 @@ function PostForm({ post }) {
         })
 
     const navigate = useNavigate()
-    const userData = useSelector((state) => state.user.userData)
+    const userData = useSelector((state) => state.auth.userData)
 
     const submit = async (data) => {
         if (post) {
@@ -62,9 +62,8 @@ function PostForm({ post }) {
                 .toLowerCase()
                 .replace(/^[a-zA-Z]+/g, "-")
                 .replace(/\s/g, "-")
-            
-            return ""
         }
+        return ""
     })
 
 
@@ -131,3 +130,4 @@ function PostForm({ post }) {
     )
 }
 
+export default PostForm

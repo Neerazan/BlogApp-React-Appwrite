@@ -18,7 +18,7 @@ import Post from "./pages/Post";
 import AllPosts from "./pages/AllPosts";
 
 const router = createBrowserRouter([
-  {
+{
     path: "/",
     element: <App />,
     children: [
@@ -78,9 +78,9 @@ const router = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Provider store={store}>
-    <RouterProvider router={router}/>
-    </Provider>
-  </React.StrictMode>,
+    <React.StrictMode>
+        <Provider store={store}>
+            <RouterProvider router={router}/>
+        </Provider>
+    </React.StrictMode>,
 )
