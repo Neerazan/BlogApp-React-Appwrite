@@ -89,12 +89,13 @@ export class Service {
         }
     }
 
-    async getPosts(queries = [Query.equal("status", "active")]) {
+    // queries = [Query.equal("status", "active")] ==> filter query
+    async getPosts() {
         try {
             return await this.databases.listDocuments(
                 conf.appwriteDatabaseId,
-                conf.appwriteCollectionId,
-                queries
+                conf.appwriteCollectionId
+                // queries ==> if query is passed
             )
         } catch (error) {
             console.log(
